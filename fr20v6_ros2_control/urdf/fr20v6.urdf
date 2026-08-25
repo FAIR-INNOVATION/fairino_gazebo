@@ -1,0 +1,498 @@
+<robot name="fr20v6">
+
+  <link name="world"/>
+
+  <joint name="world_to_base" type="fixed">
+    <parent link="world"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+<link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-2.1681E-05 -6.0648E-05 0.043457"
+        rpy="0 0 0" />
+      <mass
+        value="9.2502" />
+      <inertia
+        ixx="0.034499"
+        ixy="1.6641E-05"
+        ixz="-7.478E-06"
+        iyy="0.034518"
+        iyz="-2.0849E-05"
+        izz="0.05496" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fr20v6_ros2_control/meshes/fr20/visual-v6.0/base_link.DAE" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fr20v6_ros2_control/meshes/fr20/collision-v6.0/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="j1_Link">
+    <inertial>
+      <origin
+        xyz="-0.00019 -0.03657 0.00568"
+        rpy="0 0 0" />
+      <mass
+        value="20.79" />
+      <inertia
+        ixx="0.11681303"
+        ixy="0.000010684"
+        ixz="0.00015198"
+        iyy="0.09147711"
+        iyz="0.00458985"
+        izz="0.11321598" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fr20v6_ros2_control/meshes/fr20/visual-v6.0/j1_Link.DAE" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fr20v6_ros2_control/meshes/fr20/collision-v6.0/j1_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j1"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="j1_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.0543"
+      upper="3.0543"
+      effort="1400"
+      velocity="3.15" />
+    <calibration
+      rising="0"
+      falling="0" />
+    <dynamics
+      damping="0"
+      friction="0" />
+    <safety_controller
+      soft_upper="0"
+      soft_lower="0"
+      k_position="0"
+      k_velocity="0" />
+  </joint>
+  <link
+    name="j2_Link">
+    <inertial>
+      <origin
+        xyz="0.60525 0.00006 0.20294"
+        rpy="0 0 0" />
+      <mass
+        value="42.84" />
+      <inertia
+        ixx="0.21509702"
+        ixy="0.00193218"
+        ixz="0.11070934"
+        iyy="8.34192406"
+        iyz="0.00005317"
+        izz="8.29611691" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fr20v6_ros2_control/meshes/fr20/visual-v6.0/j2_Link.DAE" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fr20v6_ros2_control/meshes/fr20/collision-v6.0/j2_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j2"
+    type="revolute">
+    <origin
+      xyz="0 0 0.215"
+      rpy="1.5708 0 0" />
+    <parent
+      link="j1_Link" />
+    <child
+      link="j2_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-4.6251"
+      upper="1.4835"
+      effort="1400"
+      velocity="3.15" />
+    <calibration
+      rising="0"
+      falling="0" />
+    <dynamics
+      damping="0"
+      friction="0" />
+    <safety_controller
+      soft_upper="0"
+      soft_lower="0"
+      k_position="0"
+      k_velocity="0" />
+  </joint>
+  <link
+    name="j3_Link">
+    <inertial>
+      <origin
+        xyz="0.26284 0.00022 0.04308"
+        rpy="0 0 0" />
+      <mass
+        value="9.88" />
+      <inertia
+        ixx="0.03036772"
+        ixy="0.00023857"
+        ixz="0.00627398"
+        iyy="0.86016899"
+        iyz="0.00000777"
+        izz="0.85782697" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fr20v6_ros2_control/meshes/fr20/visual-v6.0/j3_Link.DAE" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fr20v6_ros2_control/meshes/fr20/collision-v6.0/j3_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j3"
+    type="revolute">
+    <origin
+      xyz="-1 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="j2_Link" />
+    <child
+      link="j3_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.8274"
+      upper="2.8274"
+      effort="635"
+      velocity="3.15" />
+    <calibration
+      rising="0"
+      falling="0" />
+    <dynamics
+      damping="0"
+      friction="0" />
+    <safety_controller
+      soft_upper="0"
+      soft_lower="0"
+      k_position="0"
+      k_velocity="0" />
+  </joint>
+  <link
+    name="j4_Link">
+    <inertial>
+      <origin
+        xyz="0.00023 -0.00228 0.01842"
+        rpy="0 0 0" />
+      <mass
+        value="4.64" />
+      <inertia
+        ixx="0.00933772"
+        ixy="0.00003325"
+        ixz="0.00005007"
+        iyy="0.00926897"
+        iyz="0.00021949"
+        izz="0.00774545" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fr20v6_ros2_control/meshes/fr20/visual-v6.0/j4_Link.DAE" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fr20v6_ros2_control/meshes/fr20/collision-v6.0/j4_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j4"
+    type="revolute">
+    <origin
+      xyz="-0.716 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="j3_Link" />
+    <child
+      link="j4_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-4.6251"
+      upper="1.4835"
+      effort="332"
+      velocity="3.2" />
+    <calibration
+      rising="0"
+      falling="0" />
+    <dynamics
+      damping="0"
+      friction="0" />
+    <safety_controller
+      soft_upper="0"
+      soft_lower="0"
+      k_position="0"
+      k_velocity="0" />
+  </joint>
+  <link
+    name="j5_Link">
+    <inertial>
+      <origin
+        xyz="-0.00023 0.00228 0.01842"
+        rpy="0 0 0" />
+      <mass
+        value="4.64" />
+      <inertia
+        ixx="0.00933772"
+        ixy="0.00003325"
+        ixz="-0.00005007"
+        iyy="0.00926897"
+        iyz="-0.00021949"
+        izz="0.00774545" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fr20v6_ros2_control/meshes/fr20/visual-v6.0/j5_Link.DAE" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fr20v6_ros2_control/meshes/fr20/collision-v6.0/j5_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j5"
+    type="revolute">
+    <origin
+      xyz="0 0 0.16601"
+      rpy="1.5708 0 0" />
+    <parent
+      link="j4_Link" />
+    <child
+      link="j5_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.0543"
+      upper="3.0543"
+      effort="332"
+      velocity="3.2" />
+    <calibration
+      rising="0"
+      falling="0" />
+    <dynamics
+      damping="0"
+      friction="0" />
+    <safety_controller
+      soft_upper="0"
+      soft_lower="0"
+      k_position="0"
+      k_velocity="0" />
+  </joint>
+  <link
+    name="j6_Link">
+    <inertial>
+      <origin
+        xyz="-0.00211 -0.00196 -0.02038"
+        rpy="0 0 0" />
+      <mass
+        value="0.6" />
+      <inertia
+        ixx="0.00071709"
+        ixy="0.00000175"
+        ixz="0.00000555"
+        iyy="0.00071408"
+        iyz="0.00000531"
+        izz="0.00127558" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fr20v6_ros2_control/meshes/fr20/visual-v6.0/j6_Link.DAE" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://fr20v6_ros2_control/meshes/fr20/collision-v6.0/j6_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j6"
+    type="revolute">
+    <origin
+      xyz="0 0 0.138"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="j5_Link" />
+    <child
+      link="j6_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.0543"
+      upper="3.0543"
+      effort="332"
+      velocity="3.2" />
+    <calibration
+      rising="0"
+      falling="0" />
+    <dynamics
+      damping="0"
+      friction="0" />
+    <safety_controller
+      soft_upper="0"
+      soft_lower="0"
+      k_position="0"
+      k_velocity="0" />
+  </joint>
+  <ros2_control name="GazeboSystem" type="system">
+    <hardware>
+      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+    </hardware>
+    <joint name="j1"><command_interface name="position"/><state_interface name="position"/><state_interface name="velocity"/></joint>
+    <joint name="j2"><command_interface name="position"/><state_interface name="position"/><state_interface name="velocity"/></joint>
+    <joint name="j3"><command_interface name="position"/><state_interface name="position"/><state_interface name="velocity"/></joint>
+    <joint name="j4"><command_interface name="position"/><state_interface name="position"/><state_interface name="velocity"/></joint>
+    <joint name="j5"><command_interface name="position"/><state_interface name="position"/><state_interface name="velocity"/></joint>
+    <joint name="j6"><command_interface name="position"/><state_interface name="position"/><state_interface name="velocity"/></joint>
+  </ros2_control>
+
+  <gazebo>
+    <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
+      <robot_param>robot_description</robot_param>
+      <parameters>package://fr20v6_ros2_control/config/robot_params.yaml</parameters>
+    </plugin>
+  </gazebo>
+  <gazebo>
+    <plugin name="joint_state_publisher" filename="libgazebo_ros_joint_state_publisher.so">
+      <ros>
+        <namespace>fr20v6</namespace>
+        <remapping>joint_states:=joint_states</remapping>
+      </ros>
+      <update_rate>100</update_rate>
+      <joint_name>j1</joint_name>
+      <joint_name>j2</joint_name>
+      <joint_name>j3</joint_name>
+      <joint_name>j4</joint_name>
+      <joint_name>j5</joint_name>
+      <joint_name>j6</joint_name>
+    </plugin>
+  </gazebo>
+
+</robot>

@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.8)
+project(fr16v6_ros2_control)
+find_package(ament_cmake REQUIRED)
+install(DIRECTORY urdf launch config DESTINATION share/${PROJECT_NAME})
+install(DIRECTORY meshes DESTINATION share/${PROJECT_NAME})
+ament_package()

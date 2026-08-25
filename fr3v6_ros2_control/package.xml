@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>fr3v6_ros2_control</name>
+  <version>1.0.0</version>
+  <description>fr3v6 ros2_control Gazebo simulation</description>
+  <maintainer email="user@example.com">User</maintainer>
+  <license>Apache-2.0</license>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <exec_depend>gazebo_ros</exec_depend>
+  <exec_depend>gazebo_ros2_control</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>ros2launch</exec_depend>
+  <export><build_type>ament_cmake</build_type></export>
+</package>
